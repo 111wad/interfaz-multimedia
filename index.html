@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cargando..</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="bg-cont">
+        <video autoplay muted loop id="bg-video">
+            <source src="media/visual-bg.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <main class="loading-container">
+        <h1 id="loading-text">JOINING SERVER</h1>
+
+        <div class="music-player-card">
+            <div class="album-art">
+                <img id="track-image" src="" alt="Portada">
+            </div>
+
+            <div class="track-details">
+                <h2 id="track-name">Cargando...</h2>
+                <p id="track-artist"></p>
+            </div>
+
+            <div class="progress-container">
+                <input type="range" id="progress-bar" value="0" max="100">
+                <div class="time-info">
+                    <span id="current-time">0:00</span>
+                    <span id="duration-time">-0:00</span>
+                </div>
+            </div>
+
+            <div class="main-controls">
+                <button id="shuffle-btn" title="Aleatorio"><i class="fas fa-random"></i></button>
+                <button id="prev-btn" title="Anterior"><i class="fas fa-backward-step"></i></button>
+                <button id="play-pause-btn" title="Reproducir/Pausar"><i class="fas fa-pause"></i></button>
+                <button id="next-btn" title="Siguiente"><i class="fas fa-forward-step"></i></button>
+                <button id="loop-btn" title="Bucle"><i class="fas fa-redo"></i></button>
+            </div>
+
+            <div class="volume-container">
+                <i class="fas fa-volume-down"></i>
+                <input type="range" id="volume-slider" min="0" max="100" value="30">
+                <i class="fas fa-volume-up"></i>
+            </div>
+        </div>
+
+        <footer class="social-links">
+            <a href="https://discord.gg/2tyXdCujhA" target="_blank"><i class="fab fa-discord"></i></a>
+            <a href="https://youtu.be/bJGFfd6P-pk?list=PLBagYtaetM2g0jNLoTkWDK_eY7GUEdKT-" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.gofundme.com/f/ayuda-a-aaron-nino-con-espina-bifida-e-hidrocefalia-severa" target="_blank"><i class="fas fa-hand-holding-heart"></i></a>
+        </footer>
+    </main>
+
+    <audio id="bg-m"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #000;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+}
+
+.bg-cont {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}
+
+.loading-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#loading-text {
+    font-size: 4rem;
+    font-weight: 800;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    margin-bottom: 2rem;
+    animation: fadeText 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes fadeText {
+    from { opacity: 0.3; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.controls {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #7289da;
+}
+
+#mute-btn {
+    background: #7289da;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.social-links {
+    position: absolute;
+    bottom: 30px;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    opacity: 1;
+    color: #7289da;
+}
+
+.music-player {
+    width: 400px;
+    background: rgba(0,0,0,0.8);
+    padding: 20px;
+    border-radius: 15px;
+    border-bottom: 4px solid #7289da;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin: 15px 0;
+    cursor: pointer;
+    accent-color: #7289da;
+}
+
+.track-info {
+    margin-bottom: 10px;
+}
+
+#track-name { font-weight: bold; display: block; font-size: 1.2rem; }
+#track-artist { font-size: 0.9rem; color: #aaa; }
+
+
+.music-player-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 30px;
+    padding: 30px;
+    width: 380px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    text-align: left;
+}
+
+/* Texto de la canción */
+#track-name { font-size: 1.4rem; margin-bottom: 5px; color: #fff; }
+#track-artist { font-size: 1.1rem; color: rgba(255,255,255,0.6); margin-bottom: 20px; }
+
+input[type="range"] {
+    width: 100%;
+    accent-color: #fff;
+    cursor: pointer;
+    height: 4px;
+}
+
+.time-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.5);
+    margin-top: 8px;
+}
+
+.main-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0;
+}
+
+.main-controls button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+#play-pause-btn { font-size: 2.2rem; }
+
+.main-controls button:hover { transform: scale(1.1); }
+
+.volume-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(255,255,255,0.5);
+}
+
+.album-art {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.album-art img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.music-player-card {
+    max-width: 350px;
+}
+
+.music-player-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    border-radius: 30px;
+    padding: 25px;
+    width: 350px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+.album-art img {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+input[type="range"] {
+    accent-color: white;
+    cursor: pointer;
+}
+
+.volume-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+    opacity: 0.6;
+}
+
+.volume-container input { height: 3px; flex-grow: 1; }
+
+.active-control {
+    color: #7289da !important;
+    text-shadow: 0 0 10px rgba(114, 137, 218, 0.8);
+    transform: scale(1.2);
+}
+
+.main-controls button:hover {
+    color: #fff;
+    cursor: pointer;
+}
+
+#progress-bar.seeking {
+    accent-color: #7289da;
+}
+
+.social-links a {
+    transition: all 0.3s ease;
+}
